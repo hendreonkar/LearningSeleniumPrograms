@@ -6,10 +6,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 @pytest.mark.negative
-@allure.title("Testing login case")
+@allure.title("Negative- testing login case")
 @allure.description("Testing login case by giving username and password")
 
-def test_Project_login_test():
+def test_Project2_login_negative_test():
 #1. Go to the URL
     driver=webdriver.Firefox()
     driver.get("https://app.vwo.com/#/login")
