@@ -18,10 +18,13 @@ def test_project3_sign_up_button_vwo_com():
     Start a free trial</a>
     
     """
+    #LINK_TEXT= Exact match
+    #sign_up_web_element= driver.find_element(By.LINK_TEXT, "Start a free trial")
+    #sign_up_web_element.click()
 
-    sign_up_web_element= driver.find_element(By.LINK_TEXT, "Start a free trial")
+    #PARTIAL_LINK_TEXT
+    sign_up_web_element = driver.find_element(By.PARTIAL_LINK_TEXT, "free trial")
     sign_up_web_element.click()
-
     #verify that it navigates to next page of start free trial
 
     assert driver.current_url== "https://vwo.com/free-trial/?utm_medium=website&utm_source=login-page&utm_campaign=mof_eg_loginpage"
